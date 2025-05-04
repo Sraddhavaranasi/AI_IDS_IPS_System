@@ -1,23 +1,26 @@
 pipeline {
     agent any
-
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/Sraddhavaranasi/AI_IDS_IPS_System.git'
+                git 'https://github.com/Sraddhavaranasi/AI_IDS_IPS_System.git'
             }
         }
-
         stage('Set up Python Environment') {
             steps {
-                sh 'python --version'
-                sh 'pip install -r backend/requirements.txt'
+                bat '''
+                python -m venv venv
+                call venv\\Scripts\\activate
+                pip install -r requirements.txt
+                '''
             }
         }
-
         stage('Run Backend Server') {
             steps {
-                sh 'nohup uvicorn backend.main:app --host 127.0.0.1 --port 8000 &'
+                bat '''
+                call venv\\Scripts\\activate
+                start /B uvicorn main:app --host 0.0.0.0 --port 8000
+                '''
             }
         }
     }
