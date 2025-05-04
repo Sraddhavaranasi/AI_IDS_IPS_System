@@ -1,0 +1,36 @@
+# Core Python Libraries
+pandas==1.5.3
+numpy==1.23.5
+scikit-learn==1.2.2
+matplotlib==3.7.1
+seaborn==0.12.2
+
+# Deep Learning
+tensorflow==2.16.1
+
+# Backend APIs
+flask==2.2.3
+fastapi==0.95.0
+uvicorn==0.21.1
+
+# Security & Network Monitoring
+pyshark==0.4.2.11
+requests==2.28.2
+
+# Logging & Monitoring
+elasticsearch==8.7.0
+
+# Docker & YAML
+docker==6.0.1
+pyyaml==6.0
+
+# Testing
+pytest==7.2.2
+selenium==4.9.1
+
+# Visualizations
+networkx==3.1
+
+# Jupyter Support
+notebook
+ipykernel
