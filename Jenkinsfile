@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Sraddhavaranasi/AI_IDS_IPS_System.git'
+                git branch: 'main', url: 'https://github.com/Sraddhavaranasi/AI_IDS_IPS_System.git'
             }
         }
 
@@ -17,7 +17,7 @@ pipeline {
 
         stage('Run Backend Server') {
             steps {
-                sh 'uvicorn backend.main:app --host 127.0.0.1 --port 8000 &'
+                sh 'nohup uvicorn backend.main:app --host 127.0.0.1 --port 8000 &'
             }
         }
     }
