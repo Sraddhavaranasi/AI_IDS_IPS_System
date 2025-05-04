@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Sraddhavaranasi/AI_IDS_IPS_System.git'
+               git branch: 'main', url: 'https://github.com/Sraddhavaranasi/AI_IDS_IPS_System.git'
             }
         }
         stage('Set up Python Environment') {
