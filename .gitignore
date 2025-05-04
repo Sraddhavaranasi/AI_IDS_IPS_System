@@ -1,3 +1,8 @@
+# Ignore all files in datasets
+datasets/*
+
+# But keep the FINAL_MERGED_DATASET_CLEAN.csv
+!datasets/FINAL_MERGED_DATASET_CLEAN.csv
 # Ignore Python cache and compiled files
 __pycache__/
 *.py[cod]
