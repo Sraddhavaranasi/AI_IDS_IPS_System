@@ -9,10 +9,10 @@ pipeline {
        stage('Set up Python Environment') {
             steps {
                 bat '''
-                C:\\Users\\Sraddha\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m venv venv
+                C:\\Users\\sradd\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m venv venv
                 call venv\\Scripts\\activate
-                C:\\Users\\Sraddha\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m pip install --upgrade pip
-                C:\\Users\\Sraddha\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m pip install -r requirements.txt
+                C:\\Users\\sradd\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m pip install --upgrade pip
+                C:\\Users\\sradd\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m pip install -r requirements.txt
                 '''
             }
         }
