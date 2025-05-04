@@ -6,12 +6,13 @@ pipeline {
                git branch: 'main', url: 'https://github.com/Sraddhavaranasi/AI_IDS_IPS_System.git'
             }
         }
-        stage('Set up Python Environment') {
+       stage('Set up Python Environment') {
             steps {
                 bat '''
-                python -m venv venv
+                C:\\Users\\Sraddha\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m venv venv
                 call venv\\Scripts\\activate
-                pip install -r requirements.txt
+                C:\\Users\\Sraddha\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m pip install --upgrade pip
+                C:\\Users\\Sraddha\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m pip install -r requirements.txt
                 '''
             }
         }
